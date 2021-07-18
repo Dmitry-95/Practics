@@ -33,12 +33,76 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
 
-      personalMovieDB[a] = b;
-      personalMovieDB[c] = d;
+for (let i = 0; i < 2; i++) {
+   const a = prompt('Один из последних просмотренных фильмов?', ''),
+         b = prompt('На сколько оцените его?', '');
+    personalMovieDB.movies[a] = b;
+}
+
+if (numberOfFilms == '') {
+    prompt(numberOfFilms);
+     
+}
 
 console.log( personalMovieDB);
+
+
+// do {
+//     console.log(a);
+//     a++;
+// }
+// while (a <= 56)
+
+// for(let i=1; i<3;i++) {
+//     if (i=){
+//         // break;
+//         continue;
+//     }
+
+//     console.log(i);
+// }
+
+
+
+// // const num = 50;
+// // switch(num) {
+// //     case 50:
+// //         console.log('Нетушки');
+  
+// //     case 51:
+// //         console.log('Еcc');
+    
+// //     default:
+// //         console.log('Еще');
+   
+// // }
+
+// // let a = 50;
+// // while (a <= 56) {
+// //     console.log(a);
+// //     a++;
+// // }
+// do {
+//     console.log(a);
+//     a++;
+// }
+// while (a <= 56)
+
+// for(let i=3; i<=7;i++) {
+//     console.log(a);
+//     a++;
+// }
+
+// for(let i=1; i<10;i++) {
+//     if (i===6){
+//         // break;
+//         continue;
+//     }
+
+//     console.log(i);
+// }
+
+
+
+
