@@ -49,6 +49,38 @@ for (let i = 0; i < 2; i++) {
 
 console.log( personalMovieDB);
 
+// Функции,урок
+
+let num = 20;
+
+function showMessage(text) {
+    console.log(text);
+    let num = 10;
+    console.log(num);
+}
+
+showMessage('Hello World!');
+console.log(num);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // do {
 //     console.log(a);
