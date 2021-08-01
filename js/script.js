@@ -55,17 +55,63 @@ let num = 20;
 
 function showMessage(text) {
     console.log(text);
-    let num = 10;
     console.log(num);
 }
 
 showMessage('Hello World!');
 console.log(num);
 
+function calc(a,b) {
+    return (a + b);
+}
+
+console.log(calc(4,3));
+console.log(calc(5,6));
+console.log(calc(7,8));
+
+function ret() {
+    let num = 50;
 
 
+    return num;
+}
 
+const anotherNum = ret();
+console.log(anotherNum);
 
+const logger = function() {
+    console.log('Hello!');
+};
+
+logger ();
+
+const calck = (a, b) =>  a + b; 
+console.log(calck(3,2));
+
+// методы и свойства
+
+const str = 'teSt';
+const arr = [1, 2, 4];
+
+console.log(str.toLowerCase());
+console.log(str);
+
+let fruit = "Some fruit";
+
+console.log(fruit.indexOf('fruit'));
+
+const logg = 'Hello World';
+
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 3));
+
+const num2 = 12.2;
+console.log(Math.round(num2));
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
 
 
 
