@@ -12,8 +12,31 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
+/* Задание на урок:
+
+1) Первую часть задания повторить по уроку
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводит в консоль главный объект программы
+
+3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функции вызывать не обязательно*/
+
 'use strict';
-const numberOfFilms = +prompt('Сколько фильмов уже посмотрели?', '');
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов уже посмотрели?', '');
+
+    while (numberOfFilms == ''|| numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов уже посмотрели?', '');
+    }
+}
+
+start();
 
 const personalMovieDB = {
     count:numberOfFilms,
@@ -23,19 +46,24 @@ const personalMovieDB = {
     privat: false
 };
 
-for (let i = 0; i < 2; i++) {
-   const a = prompt('Один из последних просмотренных фильмов?', ''),
-         b = prompt('На сколько оцените его?', '');
-
-    if (a != null && b != null && a !='' && b !='' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log('done');
-        } else {
-            console.log('error');
-            i--;
-        }
+    function rememberMyFilms() {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('Один из последних просмотренных фильмов?', ''),
+                  b = prompt('На сколько оцените его?', '');
+         
+             if (a != null && b != null && a !='' && b !='' && a.length < 50) {
+                     personalMovieDB.movies[a] = b;
+                     console.log('done');
+                 } else {
+                     console.log('error');
+                     i--;
+                 }
+             }
     }
+
+    // rememberMyFilms();
     
+function detectPersonalLevel () {
     if (personalMovieDB.count < 10) {
         console.log('Просмотрено довольно мало фильмов');
     } else if (personalMovieDB.count >= 10 && personalMovieDB.count <30) {
@@ -45,73 +73,99 @@ for (let i = 0; i < 2; i++) {
     } else {
         console.log('Произошла ошибка!');
     }
+}
 
+// detectPersonalLevel();
 
-console.log( personalMovieDB);
+function showMyDB (hidden) {
+    if (!hidden) {
+        console.log( personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres () {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.geners[i-1] = genre;
+    }
+    
+}
+
+writeYourGenres ();
+
 
 // Функции,урок
 
-let num = 20;
+// let num = 20;
 
-function showMessage(text) {
-    console.log(text);
-    console.log(num);
-}
+// function showMessage(text) {
+//     console.log(text);
+//     console.log(num);
+// }
 
-showMessage('Hello World!');
-console.log(num);
+// showMessage('Hello World!');
+// console.log(num);
 
-function calc(a,b) {
-    return (a + b);
-}
+// function calc(a,b) {
+//     return (a + b);
+// }
 
-console.log(calc(4,3));
-console.log(calc(5,6));
-console.log(calc(7,8));
+// console.log(calc(4,3));
+// console.log(calc(5,6));
+// console.log(calc(7,8));
 
-function ret() {
-    let num = 50;
+// let example = function(a, b) {
+//     return (a + b);
+// };
+// console.log(example(4,3));
 
 
-    return num;
-}
+// function ret() {
+//     let num = 50;
 
-const anotherNum = ret();
-console.log(anotherNum);
 
-const logger = function() {
-    console.log('Hello!');
-};
+//     return num;
+// }
 
-logger ();
+// const anotherNum = ret();
+// console.log(anotherNum);
 
-const calck = (a, b) =>  a + b; 
-console.log(calck(3,2));
+// const logger = function() {
+//     console.log('Hello!');
+// };
 
-// методы и свойства
+// logger ();
 
-const str = 'teSt';
-const arr = [1, 2, 4];
+// const calck = (a, b) =>  a + b; 
+// console.log(calck(3,2));
 
-console.log(str.toLowerCase());
-console.log(str);
+// // методы и свойства
 
-let fruit = "Some fruit";
+// const str = 'teSt';
+// const arr = [1, 2, 4];
 
-console.log(fruit.indexOf('fruit'));
+// console.log(str.toLowerCase());
+// console.log(str);
 
-const logg = 'Hello World';
+// let fruit = "Some fruit";
 
-console.log(logg.slice(6, 11));
-console.log(logg.substring(6, 11));
-console.log(logg.substr(6, 3));
+// console.log(fruit.indexOf('fruit'));
 
-const num2 = 12.2;
-console.log(Math.round(num2));
+// const logg = 'Hello World';
 
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// console.log(logg.slice(6, 11));
+// console.log(logg.substring(6, 11));
+// console.log(logg.substr(6, 3));
+
+// const num2 = 12.2;
+// console.log(Math.round(num2));
+
+// const test = '12.2px';
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
 
 
 
