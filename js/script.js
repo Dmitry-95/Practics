@@ -166,7 +166,20 @@ writeYourGenres ();
 // console.log(parseInt(test));
 // console.log(parseFloat(test));
 
+// Функции callback,урок
 
+function learnJS (src, callback) {
+    console.log (`Я учу: ${src}`);
+    callback();
+}
+
+// function done () {
+//     console.log('Красавчик!');
+// }
+
+let done = () => console.log('Красавчик!');
+
+learnJS('JavaScript', done);
 
 
 
