@@ -203,7 +203,7 @@
 
 // Массивы и псевдомассивы
 
-// const arr = [2, 14, 18, 3, 34];
+const arr = [2, 14, 18, 3, 34];
 // arr.sort(compareNum);
 // console.log(arr);
 
@@ -211,13 +211,13 @@
 //     return a - b;
 // }
 
-// // arr[99] = 0;
-// // console.log(arr.length);
-// // console.log(arr[2]);
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr[2]);
 
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} внутри массива ${arr}`);
-// });
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
 
 
 
@@ -404,15 +404,15 @@
 // console.log(typeof(str));
 // console.log(typeof(strObj));
 
-const soldier ={
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello');
-    }
-};
+// const soldier ={
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
 
-const jonh = Object.create(soldier);
+// const jonh = Object.create(soldier);
 
 // const jonh ={
 //     health: 100
@@ -423,4 +423,54 @@ const jonh = Object.create(soldier);
 // Object.setPrototypeOf(jonh, soldier);
 
 // console.log(jonh);
-jonh.sayHello();
+// jonh.sayHello();
+
+// Динамическая типизация JS
+// 1) String
+console.log(typeof(String(null)));
+console.log(typeof(String(5)));
+
+// 2)
+
+const num = 5;
+console.log('http://vk.com/' + num);
+
+const fontSize = 26 + 'px';
+console.log(fontSize);
+
+// To Number
+// 1)
+console.log(typeof(Number('4')));
+
+// 2)
+console.log(typeof(Number(+'4')));
+
+// 3)
+console.log(typeof(parseInt ('15px', 10)));
+
+
+let answer = +prompt('Hello', '');
+
+// To boolean
+
+// 0, '', null, undefined, NaN; - всегда превращается в false
+
+// 1)
+let switcher = null;
+
+if (switcher) {
+    console.log('Working!!!');
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log('Working!!!');
+}
+
+// 2)
+console.log(typeof(Boolean('4')));
+
+// 3)
+console.log(typeof(!!('44444')));
+
