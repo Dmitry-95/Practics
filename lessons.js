@@ -474,3 +474,7 @@ console.log(typeof(Boolean('4')));
 // 3)
 console.log(typeof(!!('44444')));
 
+function jdb () {
+    
+}
+
