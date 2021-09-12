@@ -128,13 +128,34 @@ const personalMovieDB = {
             console.log(`Любимый жанр ${n+1} - это ${item}`);
         }); 
     },
+
+    // experimentDelete: function() {
+    //     let question = prompt('Введите логин', 'Админ');
+    //     let password;
+    //     if (question == 'Админ') {
+    //         password = prompt('Введите пароль');
+    //     } else if (question == '' || question == null) {
+    //         alert('Отменено');
+    //     } else { alert('Я вас не знаю');}
+
+    //     if (password == 'Я главный') {
+    //         alert('Здравствуйте');
+    //     } else if (password == null) {
+    //         alert('Отменено');
+    //     } else {
+    //         alert('Неверный пароль');
+    //     }
+    // },
 };
 
-// personalMovieDB.start();
-// personalMovieDB.rememberMyFilms();
-// personalMovieDB.detectPersonalLevel();
-// personalMovieDB.showMyDB(personalMovieDB.privat);
-// personalMovieDB.writeYourGenres ();
+// personalMovieDB.experimentDelete();
+
+
+personalMovieDB.start();
+personalMovieDB.rememberMyFilms();
+personalMovieDB.detectPersonalLevel();
+personalMovieDB.showMyDB(personalMovieDB.privat);
+personalMovieDB.writeYourGenres ();
 
     // function rememberMyFilms() {
     //     for (let i = 0; i < 1; i++) {
